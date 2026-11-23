@@ -55,7 +55,11 @@ any add-on can. It talks to KWallet over D-Bus using `busctl`.
 3. Restart the application. The first time, KWallet may ask whether it may be
    accessed. Choose **Allow always** to avoid being asked again.
 
-To remove it, run `sudo ./uninstall.sh firefox` (or `thunderbird`).
+To remove it, run `sudo ./install.sh --uninstall firefox` (or `thunderbird`).
+
+Other options: `--dry-run` shows what would happen without changing anything,
+`--yes` overwrites an existing install without asking, and `DESTDIR=/stage`
+installs under another root (for packaging; root is not needed).
 
 The install copies two files, `kwallet-unlock.cfg` into the install folder and
 `kwallet-unlock-autoconfig.js` into its `defaults/pref` folder, after checking
